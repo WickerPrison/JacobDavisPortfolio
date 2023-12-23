@@ -93,12 +93,13 @@ article{
     flex-direction: row;
     justify-content: center;
     justify-items: center;
+    margin-top: 1%;
 }
 
 article div{
     flex: 1;
     text-align: center;
-    margin: auto;
+    margin: 2% 0 auto 0;
     font-size: 20pt;
     color:var(--secondAccent);
 }
@@ -121,10 +122,11 @@ article p{
 
 #first-image div{
     font-size: 25pt;
+    bottom: 9px;
 }
 
 img{
-    height: auto;
+    height: calc(100% - 10px);
     width: auto;
     object-fit: cover;
     max-width: calc(100% - 10px);
@@ -140,7 +142,6 @@ img:hover{
     object-fit: none;
 }
 
-
 #arcane-audit{
     object-fit: contain;
     background-color: black;
@@ -153,17 +154,18 @@ img:hover{
 
 .project-caption div{
     text-decoration: none;
-    background-color: rgb(0,0,0,.3);
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.7));
     color: var(--lightColor);
-    font-size: 20pt;
+    font-size: 16pt;
     width: calc(100% - 10px);
     position: absolute;
     left: 5px;
-    bottom: 9px;
+    bottom: -5px;
+    padding-top: 10%;
 }
 
 .project-caption:hover div{
-    background-color: rgb(0,0,0,0.6);
+    background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1));
     color: var(--secondAccent);
 }
 
