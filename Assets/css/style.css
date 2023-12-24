@@ -4,10 +4,12 @@
     --secondColor: #F3EFF5;
     --secondAccent: #72B01D;
     --lightColor: #F3EFF5;
+    --contactFontSize: 125%;
 }
 
 *{
     font-family: 'Carrois Gothic SC', sans-serif;
+    font-size: 21px;
 }
 
 nav{
@@ -20,7 +22,7 @@ nav{
 nav a{
     text-decoration: none;
     color: var(--secondColor);
-    font-size: 20pt;
+    font-size: 125%;
     margin: 0 2%;
 }
 
@@ -35,14 +37,14 @@ a:hover{
 
 h1{
     color: var(--secondAccent);
-    font-size: 80pt;
+    font-size: 500%;
     margin: 0;
 }
 
 h2{
     margin: 0;
     color:var(--secondColor);
-    font-size: 60pt;
+    font-size: 375%;
 }
 
 .line{
@@ -77,10 +79,6 @@ main article section{
     flex: 4;
 }
 
-article section a{
-    color: var(--secondColor);
-    font-size: 20pt;
-}
 
 article{
     width: 90%;
@@ -95,13 +93,13 @@ article div{
     flex: 1;
     text-align: center;
     margin: 2% 0 auto 0;
-    font-size: 25pt;
+    font-size: 156%;
     color:var(--secondAccent);
 }
 
 article p{
     flex: 4;
-    font-size: 16pt;
+    font-size: 100%;
     color:var(--secondColor);
 }
 
@@ -116,15 +114,14 @@ article p{
 }
 
 #first-image div{
-    font-size: 25pt;
+    font-size: 156%;
     bottom: 9px;
 }
 
 img{
     height: calc(100% - 10px);
-    width: auto;
+    width: calc(100% - 10px);
     object-fit: cover;
-    max-width: calc(100% - 10px);
     border: var(--lightColor) solid 5px;
     margin: 10px 0 0 0;
 }
@@ -152,9 +149,9 @@ img:hover{
     text-decoration: none;
     background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,.7));
     color: var(--lightColor);
-    font-size: 16pt;
-    width: calc(100% - 10px);
+    font-size: 100%;
     position: absolute;
+    width: calc(100% - 10px);
     left: 5px;
     bottom: -5px;
     padding-top: 10%;
@@ -178,9 +175,14 @@ img:hover{
     margin-bottom: auto;
 }
 
+article section a{
+    color: var(--secondColor);
+    font-size: var(--contactFontSize);
+}
+
 span{
     color: var(--secondColor);
-    font-size: 20pt;
+    font-size: var(--contactFontSize);
 }
 
 footer{
@@ -189,12 +191,16 @@ footer{
 
 /* 768 */
 @media screen and (max-width: 1000px) {
+    :root{
+        --contactFontSize: 100%;
+    }
+    
     nav{
         justify-content: space-evenly;
     }
-
+    
     nav a{
-        font-size: 14pt;
+        font-size: 88%;
     }
 
     #name{
@@ -203,21 +209,51 @@ footer{
     }
 
     h1{
-        font-size: 40pt;
+        font-size: 250%;
         text-align: center;
     }
 
     h2{
-        font-size: 30pt;
+        font-size: 188%;
         text-align: center;
     }
 
     article{
         width: 100%;
         flex-direction: column;
+        margin-top: 0;
     }
 
     article p{
         margin: 0 5%;
+        font-size: 88%;
+    }
+
+    .project-caption{
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .project-caption div{
+        bottom: 9px;
+        width: 100%;
+    }
+
+    #first-image div{
+        font-size: 100%;
+    }
+
+    img{
+        width: 100%;
+    }
+
+    #contact section{
+        margin: 3% auto 0 auto;
+    }
+}
+
+@media screen and (min-width: 2500px) {
+    *{
+        font-size: 67px;
     }
 }
