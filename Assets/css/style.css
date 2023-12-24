@@ -39,11 +39,6 @@ h1{
     margin: 0;
 }
 
-header h1::after{
-    content: " - Web Developer";
-    color: var(--secondAccent);
-}
-
 h2{
     margin: 0;
     color:var(--secondColor);
@@ -100,7 +95,7 @@ article div{
     flex: 1;
     text-align: center;
     margin: 2% 0 auto 0;
-    font-size: 20pt;
+    font-size: 25pt;
     color:var(--secondAccent);
 }
 
@@ -180,6 +175,7 @@ img:hover{
 
 #contact > *{
     margin-top: auto;
+    margin-bottom: auto;
 }
 
 span{
@@ -189,4 +185,39 @@ span{
 
 footer{
     height: 100px;
+}
+
+/* 768 */
+@media screen and (max-width: 1000px) {
+    nav{
+        justify-content: space-evenly;
+    }
+
+    nav a{
+        font-size: 14pt;
+    }
+
+    #name{
+        display: block;
+        width: 100%;
+    }
+
+    h1{
+        font-size: 40pt;
+        text-align: center;
+    }
+
+    h2{
+        font-size: 30pt;
+        text-align: center;
+    }
+
+    article{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    article p{
+        margin: 0 5%;
+    }
 }
