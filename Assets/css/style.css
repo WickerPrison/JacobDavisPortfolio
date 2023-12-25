@@ -5,6 +5,7 @@
     --secondAccent: #72B01D;
     --lightColor: #F3EFF5;
     --contactFontSize: 125%;
+    --borderSize: 5px;
 }
 
 *{
@@ -110,7 +111,7 @@ article p{
 #first-image img{
     width: auto;
     height: auto;
-    max-width: calc(100% - 10px);
+    max-width: calc(100% - calc(var(--borderSize) * 2));
 }
 
 #first-image div{
@@ -122,12 +123,12 @@ img{
     height: calc(100% - 10px);
     width: calc(100% - 10px);
     object-fit: cover;
-    border: var(--lightColor) solid 5px;
+    border: var(--lightColor) solid var(--borderSize);
     margin: 10px 0 0 0;
 }
 
 img:hover{
-    border:var(--secondAccent) solid 5px;
+    border:var(--secondAccent) solid var(--borderSize);
 }
 
 .object-contain{
@@ -151,7 +152,7 @@ img:hover{
     color: var(--lightColor);
     font-size: 100%;
     position: absolute;
-    width: calc(100% - 10px);
+    width: calc(100% - calc(var(--borderSize) * 2));
     left: 5px;
     bottom: -5px;
     padding-top: 10%;
@@ -255,5 +256,9 @@ footer{
 @media screen and (min-width: 2500px) {
     *{
         font-size: 67px;
+    }
+
+    #first-image div{
+        bottom: 21px;
     }
 }
