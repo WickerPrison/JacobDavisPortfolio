@@ -28,6 +28,7 @@ nav a{
 }
 
 a:hover{
+    cursor: pointer;
     color: var(--secondAccent);
 }
 
@@ -176,21 +177,25 @@ img:hover{
     margin-bottom: auto;
 }
 
-article section a{
+span{
     color: var(--secondColor);
     font-size: var(--contactFontSize);
 }
 
-span{
+span a{
     color: var(--secondColor);
-    font-size: var(--contactFontSize);
+    font-size: 100%;
+    text-decoration: none;
+}
+
+article span{
+    flex: 2;
 }
 
 footer{
     height: 100px;
 }
 
-/* 768 */
 @media screen and (max-width: 1000px) {
     :root{
         --contactFontSize: 100%;
