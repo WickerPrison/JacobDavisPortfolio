@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="./Assets/css/style.css" />
 </head>
 <body>
+    <!-- the header just contains the nav links -->
     <header>
         <nav>
             <a href="#about">About Me</a>
@@ -19,6 +20,7 @@
         </nav>
     </header>
     <main>
+        <!-- this section has my name and title -->
         <section id="name">
             <div class="section-title"></div>
             <div>
@@ -26,14 +28,22 @@
                 <h2>Software Engineer</h2>
             </div>
         </section>
+
+        <!-- This creates a line beneath my name -->
         <div class="line"></div>
+
+        <!-- This sets up the about me section -->
         <section id="about">
             <div class="section-title">About Me</div>
             <p>I am a developer with programming experience in a few different fields. I have a master’s degree in Physical Chemistry with my master’s thesis focusing heavily on writing code in MATLAB to simulate and analyze complex ion trajectories.  I am also a hobbyist game developer and the co founder and lead developer for Broken Beaker Studios, a small video game studio currently working on our first commercial release.</p>
         </section>
+
+        <!-- this sets up the work section where portfolio pieces are shown -->
         <section id="work">
             <section>
                 <div class="section-title">Work</div>
+
+                <!-- This first image is larger and formatted slightly differently than the others -->
                 <a class="project-caption" id="first-image" href="https://wickerprison.github.io/Challenge1/">
                     <img src="./Assets/Images/digital-marketing-meeting.jpg">
                     <div class="section-title">
@@ -43,6 +53,8 @@
             </section>
             <section>
                 <div class="section-title"></div>
+
+                <!-- Arcane Audit doesn't totally fit here since this will be my web dev portfolio, but I figured it was a better placeholder than random crap -->
                 <a class="project-caption" href="https://store.steampowered.com/app/2381770/Arcane_Audit/">
                     <img id="arcane-audit" src="./Assets/Images/MainCapsule.png">
                     <div class="section-title">
@@ -50,6 +62,8 @@
                     </div>
                 </a> 
                 <div class="spacer"></div>
+
+                <!-- Note: I did not actually cure cancer, this is a placeholder -->
                 <a class="project-caption">
                     <img src="https://imgs.search.brave.com/EjSQAGvPPW9_efeLHUyYFZoM42RvLbApPZcV-KZdbMQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9zdDIu/ZGVwb3NpdHBob3Rv/cy5jb20vMTAxNzIy/OC8xMDA1Mi9pLzQ1/MC9kZXBvc2l0cGhv/dG9zXzEwMDUyOTY1/MC1zdG9jay1waG90/by1tYW4tcG91cmlu/Zy1jaGVtaWNhbHMu/anBn">
                     <div class="section-title">
@@ -59,6 +73,7 @@
             </section>
             <section>
                 <div class="section-title"></div>
+                <!-- Note: I did not actually watch every episode of Caillou, this is a placeholder -->
                 <a class="project-caption">
                     <img src="https://imgs.search.brave.com/zMY1kZtwgfAADWePcgWS1pj9MhwuNDbfTvRoxRW45bA/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9jb250/ZW50LWVuLmNhaWxs/b3UuY29tL3VwbG9h/ZHMvMjAxNi8wMy9D/YWlsbG91X0NoYXJh/Y3Rlcl9DYWlsbG91/XzcxOXg0MDUtMS5q/cGc">
                     <div class="section-title">
@@ -66,6 +81,7 @@
                     </div>
                 </a>
                 <div class="spacer"></div>
+                <!-- Note: I did not actually end world hunger, this is a placeholder -->
                 <a class="project-caption">
                     <img src="./Assets/Images/world-food-crisis-concept.jpg">
                     <div class="section-title">
@@ -74,6 +90,10 @@
                 </a>
             </section>
         </section>
+
+        <!-- this is the contact section 
+            once we learn js I will come back and make the email address get copied to the clipboard when you click on it
+            this twitter account is my only social media at the moment, later I will add a linked in account -->
         <section id="contact">
             <div class="section-title">Contact</div>
             <span>Email: Cobylax17@gmail.com</span>
@@ -90,8 +110,6 @@
 </html>
 
 <!-- To Do list:
--comment code
 -write readme
--fix deployed version
 -add picture
 -->

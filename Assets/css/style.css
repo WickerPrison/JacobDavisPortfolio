@@ -1,3 +1,4 @@
+/* declare variables */
 :root{
     --mainColor: #153B50;
     --mainAccent: #429EA6;
@@ -8,11 +9,13 @@
     --borderSize: 5px;
 }
 
+/* universal selector */
 *{
     font-family: 'Carrois Gothic SC', sans-serif;
     font-size: 21px;
 }
 
+/* applies to the nav bar at the top of the page */
 nav{
     width: 100%;
     margin-top: 7px;
@@ -60,6 +63,7 @@ h2{
     display: block;
 }
 
+/* sets up the background */
 body{
     position:absolute;
     left: 0;
@@ -74,13 +78,15 @@ main{
     display: block;
 }
 
+/* the section that contains all of the images of projects */
 #work{
     display: flex;
     flex-direction: column;
     width: 100%;
 }
 
-main section > div{
+/* things inside the body should take up the right 4/5 of the screen */
+section > div{
     flex: 4;
 }
 
@@ -93,6 +99,7 @@ section{
     margin-top: 1%;
 }
 
+/* sets up the section headings on the left side of the screen */
 .section-title{
     flex: 1;
     text-align: center;
@@ -114,6 +121,7 @@ section p{
 #first-image img{
     width: auto;
     height: auto;
+    /* this calculation ensures the image takes up 100% of the available space without the borders causing it to spill over the edge */
     max-width: calc(100% - calc(var(--borderSize) * 2));
 }
 
@@ -122,20 +130,18 @@ section p{
     bottom: 9px;
 }
 
+/* this causes images to fit correctly in the right space and have uniform size without stretching */
 img{
-    height: calc(100% - 10px);
-    width: calc(100% - 10px);
+    height: calc(100% - calc(var(--borderSize) * 2));
+    width: calc(100% - calc(var(--borderSize) * 2));
     object-fit: cover;
     border: var(--lightColor) solid var(--borderSize);
     margin: 10px 0 0 0;
 }
 
+/* borders light up when hovering over images */
 img:hover{
     border:var(--secondAccent) solid var(--borderSize);
-}
-
-.object-contain{
-    object-fit: none;
 }
 
 #arcane-audit{
@@ -143,11 +149,13 @@ img:hover{
     background-color: black;
 }
 
+/* sets up the container that holds the project caption and positions it correctly */
 .project-caption{
     position: relative;
     flex: 1.95;
 }
 
+/* sets up the actual project caption itself */
 .project-caption div{
     pointer-events: none;
     text-decoration: none;
@@ -161,11 +169,13 @@ img:hover{
     padding-top: 10%;
 }
 
+/* makes the caption change colors when the image is hovered */
 .project-caption:hover div{
     background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1));
     color: var(--secondAccent);
 }
 
+/* acts as an empty space in the flexbox to get spacing correct */
 .spacer{
     flex: 0.1;
 }
@@ -174,11 +184,13 @@ img:hover{
     margin-top: 3%;
 }
 
+/* applies to all direct children of the #contact */
 #contact > *{
     margin-top: auto;
     margin-bottom: auto;
 }
 
+/* spans are only used in the contact section */
 span{
     color: var(--secondColor);
     font-size: var(--contactFontSize);
@@ -194,6 +206,7 @@ section span{
     flex: 2;
 }
 
+/* the footer is blank space just so that content doesn't go right up to the bottom of the screen */
 footer{
     height: 100px;
 }
